@@ -1,4 +1,5 @@
 <?php
+
 namespace Tychovbh\LaravelRevisions\Tests\Feature;
 
 use Tychovbh\LaravelRevisions\Tests\TestCase;
@@ -13,10 +14,9 @@ class RevisionsTest extends TestCase
     {
         $page = Page::factory()->create();
 
-
         $this->assertDatabaseHas('pages', [
             'title' => $page->title,
-            'url' => $page->url
+            'url' => $page->url,
         ]);
     }
 }
